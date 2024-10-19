@@ -1,20 +1,20 @@
-// components/StudentCard.jsx
+type CardInfo = {
+  name: string;
+  age: number; 
+  rollNumber: string;
+  className: string;
+};
 
-interface{
-  name: 
-}
-
-export default function StudentCard({ name, age, rollNumber, className }) {
-    return (
-      <div className="bg-white shadow-md rounded-lg p-6 w-full max-w-sm mx-auto my-4">
-        <div className="flex flex-col items-center">
-          <div className="bg-gray-200 rounded-full h-24 w-24 mb-4"></div> {/* Placeholder for profile image */}
-          <h2 className="text-xl font-semibold">{name}</h2>
-          <p className="text-gray-600">Age: {age}</p>
-          <p className="text-gray-600">Roll Number: {rollNumber}</p>
-          <p className="text-gray-600">Class: {className}</p>
-        </div>
+export default function StudentCard({ name, age, rollNumber, className }: CardInfo) {
+  return (
+    <div className="w-[420px] rounded-xl h-60 shadow-md mx-5 flex justify-around items-center">
+      <div className="w-40 h-40 bg-black text-white flex items-center justify-center text-center">Any Image <br /> Here</div>
+      <div className="flex justify-center flex-col items-start">
+        <h2 className="text-3xl">{name}</h2>
+        <p className="">Age: {age}</p>
+        <p className="">Roll Number: {rollNumber}</p>
+        <p className="">Class: {className}</p>
       </div>
-    );
-  }
-  
+    </div>
+  );
+}
